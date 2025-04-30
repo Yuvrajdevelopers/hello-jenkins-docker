@@ -10,12 +10,12 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t hello-jenkins-docker .'
+                bat 'docker build -t hello-jenkins-docker .'
             }
         }
         stage('Run Container') {
             steps {
-                sh 'docker run --rm hello-jenkins-docker'
+                bat 'docker run --rm hello-jenkins-docker'
             }
         }
     }
